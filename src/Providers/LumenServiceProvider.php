@@ -3,8 +3,9 @@
 namespace Albawebstudio\AppleSecretGenerator\Providers;
 
 use Albawebstudio\AppleSecretGenerator\Console\AppleSecretGeneratorCommand;
+use Illuminate\Support\ServiceProvider;
 
-class LumenServiceProvider
+class LumenServiceProvider extends ServiceProvider
 {
 
     /**
@@ -22,7 +23,9 @@ class LumenServiceProvider
      */
     public function register()
     {
-       $this->registerAppleSecretGeneratorCommand();
+        $this->registerAppleSecretGeneratorCommand();
+
+        $this->commands('albawebstudio.apple.secret');
     }
 
     protected function registerAppleSecretGeneratorCommand()
