@@ -8,7 +8,7 @@
         "nesbot/carbon": "^1.0|^2.0",
         "illuminate/support": "^8.61"
     },
-    "license": "UNLICENSED",
+    "license": "MIT",
     "autoload": {
         "psr-4": {
             "Albawebstudio\\AppleSecretGenerator\\": "src/"
@@ -28,6 +28,12 @@
         {
             "name": "Andrew Alba",
             "email": "aalba@albaweb.studio"
+        }
+    ],
+    "funding": [
+        {
+            "type": "other",
+            "url": "https://www.buymeacoffee.com/albawebstudio"
         }
     ],
     "require-dev": {
