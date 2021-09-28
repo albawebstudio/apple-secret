@@ -3,8 +3,12 @@
 namespace Albawebstudio\AppleSecretGenerator\Console;
 
 use Albawebstudio\AppleSecretGenerator\Services\AppleToken;
+use Exception;
 use Illuminate\Console\Command;
 use Illuminate\Console\ConfirmableTrait;
+use Lcobucci\JWT\Configuration;
+use Lcobucci\JWT\Signer\Hmac\Sha256;
+use Lcobucci\JWT\Signer\Key\LocalFileReference;
 
 class AppleSecretGeneratorCommand extends Command
 {
@@ -26,9 +30,7 @@ class AppleSecretGeneratorCommand extends Command
     place in ./docker/sign-in-with-apple/ directory.';
 
     /**
-     * Create a new command instance.
-     *
-     * @return void
+     * @throws Exception
      */
     public function __construct()
     {
